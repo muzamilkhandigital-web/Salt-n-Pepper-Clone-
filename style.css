@@ -1,0 +1,549 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700;900&display=swap");
+
+@font-face {
+    font-family: Futurak;
+    src: url(./fonts/futurak.ttf.ttf);
+    font-display: swap;
+
+}
+
+:root {
+  --color-bg: #000000;
+  --color-bg-alt: #0f0f0f;
+  --color-primary: #ed1c24;
+  --color-accent: #1fa84f;
+  --color-text: #ffffff;
+  --color-text-muted: #b3b3b3;
+  --color-border: #ffffff;
+  --color-card-bg: #ffffff;
+  --color-card-text: #111111;
+
+
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
+  --font-brand: "Futurak", serif;
+  --font-text: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4 { font-family: var(--font-heading); }
+h2 { font-size: var(--fs-xl); }
+h3 { font-size: var(--fs-lg); }
+
+/* Navbar Started */
+
+.nav-bar{
+    background-color: var(--color-bg);
+    padding: 16px 0;
+}
+
+.nav-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 165px;
+}
+
+.nav-bar nav{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-bar nav ul{
+display: flex;
+list-style: none;
+gap: 25px;
+}
+
+.nav-bar nav ul a{
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 400;
+    font-size: var(--fs-base);
+}
+
+.nav-bar nav ul a:hover{
+    color: var(--color-primary);
+
+}
+
+.nav-actions{
+    display: flex;
+    gap: 12px;
+    
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--color-text);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: var(--fs-sm);
+}
+
+.btn-franchise{
+    border: 1px solid var(--color-border);
+}
+
+.btn-order{
+    background-color: var(--color-primary);
+}
+
+.btn span{
+    color: var(--color-primary);
+    background-color: var(--color-border);
+    border-radius: 23px;
+    padding: 6px 7px;
+}
+
+/* Hero Section */
+
+
+.banner img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Brands Section */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 3rem;
+    font-family: var(--font-text);
+    font-weight: 400;
+}
+
+.section-title span{
+    font-family: var(--font-brand);
+}
+
+.brands{
+    background-color: var(--color-bg);
+    padding: 48px 0;
+}
+
+.brands p{
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brands-grid{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+}
+
+.brand-card{
+    flex: 1;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.brand-card img{
+    width: 100%;
+    object-fit: contain;
+    height: 120px;
+    display: block;
+    border-radius: 3px;
+    background-color: var(--color-card-bg);
+    padding: 0 19px;
+}
+
+.brand-card .btn{
+    justify-content: center;
+}
+
+/* Franchises Section */
+
+.franchises{
+    padding: 48px 0;
+    background-color: var(--color-bg-alt);
+}
+
+.section-title .txt{
+    font-family: var(--font-heading);
+}
+
+.section-intro{
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.franchise-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.franchise-card img, .franchise-info{
+    width: 48%;
+}
+
+.franchise-card img{
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.franchise-card.reverse{
+    flex-direction: row-reverse;
+}
+
+.franchise-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.city{
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.48em;
+    font-size: var(--fs-base);
+}
+
+.franchise-info h3{
+    font-family: var(--font-text);
+    font-weight: 400;
+}
+
+.franchise-info h3 span{
+    font-family: var(--font-brand);
+}
+
+.address, .phone{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-muted);
+
+}
+
+.icon{
+    color: var(--color-text-muted);
+
+}
+
+.address .small{
+    font-size: 0.75rem;
+}
+
+/* Express Franchises Section */
+
+.express{
+    padding: 48px 0;
+    background-color: var(--color-bg);
+}
+
+.express .section-title{
+    margin-bottom: 30px;
+}
+
+.express-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.express-card{
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.express-card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.express-card .franchise-info{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+/* Village Franchise Section */
+
+.village{
+    padding: 48px 0;
+    background-color: var(--color-bg-alt);
+}
+
+.village .franchise-card{
+    margin-bottom: 0;
+}
+
+.btn-village{
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-village span{
+    color: var(--color-accent);
+}
+
+/* Footer Section */
+
+.footer{
+    background-color: var(--color-bg);
+    padding: 48px 0 0;
+}
+
+.footer-grid{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.footer-col{
+    flex: 1;
+}
+
+.footer-col:first-child{
+    flex: 2;
+}
+
+.footer-logo{
+    width: 140px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.footer-col p{
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.footer h4{
+    margin-bottom: 16px;
+
+
+}
+
+.footer-links{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col a{
+    color: var(--color-text-muted);
+    text-decoration: none;
+}
+
+.footer-col a:hover{
+    color: var(--color-primary);
+}
+
+.legal{
+    margin-top: 20px;
+}
+
+.legal a{
+    margin-right: 12px;
+    
+}
+
+.footer-col .contact-label{
+    color: var(--color-text); 
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.social-icons{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.app-badges{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.app-badges img{
+    width: 141px;
+    display: block;
+}
+
+.footer-bottom{
+    margin-top: 40px;
+    padding: 16px 0;
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    background-color: var(--color-bg-alt);
+}
+
+.footer-bottom .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom a{
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .nav-container{
+        padding: 0 10px;
+    }
+    .nav-bar nav{
+        gap: 10px;
+    }
+    .nav-bar nav ul{
+        gap: 10px;
+    }
+    .nav-actions{
+        gap: 6px;
+    }
+    .nav-actions .btn{
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+    .nav-bar nav ul a{
+        font-size: 11px;
+    }
+    .logo{
+        width: 60px;
+    }
+
+    /* Brands Section */
+.brands{
+    padding: 30px 0;
+}
+
+.brands-grid{
+    gap: 10px;
+}
+
+.section-title{
+    font-size: 1.5rem;
+}
+
+.brand-card .btn{
+    font-size: 10px;
+    padding: 6px 4px;
+
+}
+
+.brand-card img{
+    height: 80px;
+}
+
+/* Franchises Section */
+
+.franchises{
+    padding: 30px 0;
+}
+
+.franchise-card, .franchise-card.reverse{
+    flex-direction: column;
+
+    
+}
+
+.franchise-card img, .franchise-info{
+    width: 100%;
+}
+
+.franchise-card img{
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+/* Express Franchises Section */
+
+.express{
+    padding: 30px 0;
+}
+
+.express-grid{
+    gap: 16px;
+}
+
+.express-card{
+    width: 47%;
+}
+
+/* Village Franchise Section */
+
+.village{
+    padding: 30px 0;
+}
+
+}
